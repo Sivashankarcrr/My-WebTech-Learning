@@ -1,0 +1,20 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.2fr 0.2fr 2.3fr 0.2fr 2.1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 0.7fr 5.5fr 0.1fr 3.3fr 3.3fr 1fr;
+  grid-template-areas: "Vertical-Tab News-Image News-Image News-Image . . ." "Vertical-Tab News-Image News-Image News-Image . . ." "Vertical-Tab News-Image News-Image News-Image . . ." "Vertical-Tab News-Image News-Image News-Image . . ." "Vertical-Tab News-Type\ Bar News-Type\ Bar News-Type\ Bar . . ." "Vertical-Tab News-Content\ Area News-Content\ Area News-Content\ Area . . ." ". News-Content\ Area News-Content\ Area News-Content\ Area . . ." ". News-Content\ Area News-Content\ Area News-Content\ Area . . ." ". News-Content\ Area News-Content\ Area News-Content\ Area . . ." ". News-Content\ Area News-Content\ Area News-Content\ Area . . .";
+}
+
+.Vertical-Tab {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr 1.1fr;
+  grid-template-rows: 1.5fr 0.5fr;
+  grid-template-areas: ". . ." ". . .";
+  grid-area: Vertical-Tab;
+}
+
+.News-Image { grid-area: News-Image; }
+
+.News-Type\ Bar { grid-area: News-Type\ Bar; }
+
+.News-Content\ Area { grid-area: News-Content\ Area; }

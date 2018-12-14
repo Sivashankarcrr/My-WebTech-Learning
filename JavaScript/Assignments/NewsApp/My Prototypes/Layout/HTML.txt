@@ -1,0 +1,6 @@
+<div class="grid-container">
+  <div class="Vertical-Tab"></div>
+  <div class="News-Image"></div>
+  <div class="News-Type\ Bar"></div>
+  <div class="News-Content\ Area"></div>
+</div>
