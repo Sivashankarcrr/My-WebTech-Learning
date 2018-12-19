@@ -1,0 +1,40 @@
+  
+  #TopTitleBar
+   { 
+      padding: 10px; background-color: rgba(0, 0, 255, 0.815);
+     font-weight: bold; font-size: 1.25em; text-align: center; color: white; 
+    
+  }
+
+  
+  #NewsImage
+   { 
+      height: 200px; width: auto; background-color: aliceblue;    
+  }
+  
+  #NewsTopic
+  {
+    
+  }
+
+  #NewsContent
+  {
+    font-style: italic
+  }
+
+  #But_NextNews
+  {
+     //Tobedone
+  }
+body
+{
+  background-color: rgb(168, 196, 206);
+}
+
+
+
+  .News-Image\ Area { grid-area: News-Image\ Area; padding: 20px; background-color: green }
+  
+  .NewsHeader-Area { grid-area: NewsHeader-Area; padding: 20px;background-color: blue }
+  
+  .News-Area { grid-area: News-Area; }
