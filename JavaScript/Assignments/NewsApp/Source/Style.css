@@ -1,7 +1,12 @@
-  
+:root {
+  --main-theme-color: rgb(152, 76, 175);
+  --main-bg-color: rgb(168, 196, 206); 
+
+}
+
   #TopTitleBar
    { 
-      padding: 10px; background-color: rgba(0, 0, 255, 0.815);
+      padding: 10px; background-color: var(--main-theme-color);
      font-weight: bold; font-size: 1.25em; text-align: center; color: white; 
     
   }
@@ -24,18 +29,99 @@
 
   #But_NextNews
   {
-     
   }
-.SearchButtons
-{
-  background-color: beige;
-  size : 2px
-}
 
+  .DirectionButton{
+  display: inline-block;
+  border-radius: 4px;
+  background-color: var(--main-theme-color);
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  }
+  
+  .LeftDirectionButton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .RightDirectionButton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  .LeftDirectionButton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  .RightDirectionButton span:after {
+    content: '\00ab';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: -20px;
+    transition: 0.5s;
+  }
+
+  .LeftDirectionButton:hover span {
+    padding-right: 25px;
+  }
+  .RightDirectionButton:hover span {
+    padding-left: 25px;
+  }
+  .LeftDirectionButton:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  .RightDirectionButton:hover span:after {
+    opacity: 1;
+    left: 0;
+  }
 body
 {
-  background-color: rgb(168, 196, 206);
+  background-color: var(--main-bg-color) ;
+
 }
+
+.button {
+  background-color: rgb(152, 76, 175); /* Green */
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+
+.SearchButtons:hover
+{
+  background-color: rgb(8, 183, 241);
+  color: white;
+}
+.buttonSelection
+{
+  background-color: rgba(43, 108, 228, 0.918);
+}
+
 
 
 

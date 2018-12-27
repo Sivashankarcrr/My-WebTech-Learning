@@ -104,8 +104,11 @@ QueryNews(url)
 function HandleSearchButtons(e)
 {   
     for(i=0;i<Searchbuttons.length;i++)
-    {Searchbuttons[i].style.backgroundColor = "beige";}
-    e.target.style.backgroundColor = "red";
+    {
+        Searchbuttons[i].classList.remove("buttonSelection");
+        Searchbuttons[i].classList.add("button");
+    }
+    e.target.classList.add("buttonSelection");
     
     str = e.target.innerHTML;
     UpdateNewsBySearch(str);
