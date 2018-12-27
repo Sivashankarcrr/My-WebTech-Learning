@@ -1,29 +1,69 @@
-var url = 'https://newsapi.org/v2/top-headlines?' +
-          'country=in&' +
-          'apiKey=2874d3ef7bff4fc7bb5bf51cc1d27576';
-var req = new Request(url);
-var ReceivedString;
-var ReceivedPromise;
-var NewsJSON;
-fetch(req)
-    .then(function(ReceivedString) {
-        //console.log(ReceivedNews)//.json() .then(function assign(str){}));       
-        ReceivedPromise = ReceivedString.json();
-        Promise.resolve(ReceivedPromise) 
-            .then(
-                function(value)
-                    {NewsJSON = value;
-                     Initialize_FirstNews(NewsJSON);
-                    }
-                )
-    })
+
+/***************************************************************************
+ * Get All HTML Elements
+ ***************************************************************************/
 
  var UI_NewsHeading = document.getElementById("NewsTopic");
  var UI_NewsContent = document.getElementById("NewsContent");
  var UI_NewsImage   = document.getElementById("NewsImage");
  var UI_NextNewsButton = document.getElementById("But_NextNews")
+ var UI_PrevNewsButton = document.getElementById("But_PrevNews");
+ var Searchbuttons = document.getElementsByClassName("SearchButtons");
 
- var CurrentNewsIndex = 0;
+/***************************************************************************
+ * Event Registrations
+ ***************************************************************************/
+
+ UI_NextNewsButton.addEventListener("click", UpdateNextNews);
+ UI_PrevNewsButton.addEventListener("click", UpdatePrevNews);
+ //document.getElementById("SearchButtons").addEventListener("click", HandleSearchButtons);
+ for (var i = 0; i < Searchbuttons.length; i++) {
+     Searchbuttons[i].onclick = HandleSearchButtons;
+   }
+ 
+/***************************************************************************
+ * Global Variables
+ ***************************************************************************/
+
+   var NewsJSON;
+   var MaxNumNews = 20;
+   var CurrentNewsIndex = 0;
+   var url = 'https://newsapi.org/v2/top-headlines?' +
+             'country=in&' +
+             'apiKey=2874d3ef7bff4fc7bb5bf51cc1d27576';
+
+/***************************************************************************
+ * Initalization
+ ***************************************************************************/
+
+QueryNews(url);
+/***************************************************************************
+ * Functions
+ ***************************************************************************/   
+   
+   function QueryNews(url)
+   {
+   var req = new Request(url);
+   var ReceivedString;
+   var ReceivedPromise;
+   
+   fetch(req)
+       .then(function(ReceivedString) {
+           //console.log(ReceivedNews)//.json() .then(function assign(str){}));       
+           ReceivedPromise = ReceivedString.json();
+           Promise.resolve(ReceivedPromise) 
+               .then(
+                   function(value)
+                       {NewsJSON = value;
+                        Initialize_FirstNews(NewsJSON);
+                       }
+                   )
+       })
+   }
+   
+   
+
+
 
  function Initialize_FirstNews(NewsJSON)
 {
@@ -41,10 +81,34 @@ function UpdateNews()
 }
 function UpdateNextNews()
 {
-    CurrentNewsIndex = CurrentNewsIndex+1;
+    CurrentNewsIndex = (CurrentNewsIndex+1)%MaxNumNews;
+    UpdateNews();
+}
+function UpdatePrevNews()
+{
+    CurrentNewsIndex = (CurrentNewsIndex-1);
+    if(CurrentNewsIndex <0)
+    {CurrentNewsIndex = MaxNumNews-1;}
     UpdateNews();
 }
 
-UI_NextNewsButton.addEventListener("click", UpdateNextNews);
+function UpdateNewsBySearch(str)
+{ 
+    var url = 'https://newsapi.org/v2/everything?' +
+          'q='+str+'&' +
+          'apiKey=2874d3ef7bff4fc7bb5bf51cc1d27576';
+
+QueryNews(url)
+}
+
+function HandleSearchButtons(e)
+{   
+    for(i=0;i<Searchbuttons.length;i++)
+    {Searchbuttons[i].style.backgroundColor = "beige";}
+    e.target.style.backgroundColor = "red";
+    
+    str = e.target.innerHTML;
+    UpdateNewsBySearch(str);
+}
 
 //Initialize_FirstNews(ReceivedNews);

@@ -26,6 +26,12 @@
   {
      
   }
+.SearchButtons
+{
+  background-color: beige;
+  size : 2px
+}
+
 body
 {
   background-color: rgb(168, 196, 206);
