@@ -1,23 +1,17 @@
-<head><link rel="stylesheet" href="Style.css">
+<head><link rel="stylesheet" href="MainFrameStyle.css">
 
 </head>
 <body>
-  <div id = "TopTitleBar">NewsApp</div>
-
-<img  id = "NewsImage" src="" ></img> 
-
-<div></div>
-<button class = "button SearchButtons" type = "button">Sports</button>
-<button class = "button SearchButtons" type = "button">India</button>
-<button class = "button SearchButtons" type = "button">Cricket</button>
-<button class = "button SearchButtons" type = "button">Tamilnadu</button>
-<div></div>
-<h3 id = "NewsTopic">Test</h3>
-<p1 id = "NewsContent">NewsContentTest</p1>
-<div></div>
-<div style = "position:fixed ; bottom:11px">
-<button id = "But_PrevNews" type="button" class = "DirectionButton RightDirectionButton"><span>Previous News</span></button>
-<button id = "But_NextNews" type="button" class = "DirectionButton LeftDirectionButton"><span>Next News</span></button>
-</div>
+    <div class="MenuBar">
+      
+        <li><a id = "HomeLink" href="NewsPage/NewsPage.html" target = "Panel"><b>&#9776</b></a></li>
+        <li><a id = "SettingsLink" href="SettingsPage/Settings.html" target = "Panel">&#9881</a></li>
+    </div>
+    
+  
+<iframe  class = "Panel" name = "Panel" src = "NewsPage/NewsPage.html"></iframe> 
+    
+        
+  
 </body>
-<script src="MainCode.js"></script>
+<script src="MainFrame.js"></script>
