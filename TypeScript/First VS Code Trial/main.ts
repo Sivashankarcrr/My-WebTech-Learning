@@ -1,0 +1,1 @@
+var VariableName :string = "str";
