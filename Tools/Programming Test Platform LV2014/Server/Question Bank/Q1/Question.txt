@@ -1,0 +1,1 @@
+Write a C code to generate N Palindrome 
