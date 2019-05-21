@@ -1,6 +1,7 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Project Type="Project" LVVersion="14008000">
 	<Item Name="My Computer" Type="My Computer">
+		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.tcp.enabled" Type="Bool">false</Property>
@@ -11,10 +12,23 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="Coding Platform.lvlib" Type="Library" URL="../Server/Server Core/Coding Platform.lvlib"/>
-		<Item Name="login test.vi" Type="VI" URL="../Test codes/login test.vi"/>
 		<Item Name="SolitonCodingContest" Type="Web Service">
+			<Property Name="ws.autoIncrementVersion" Type="Bool">true</Property>
+			<Property Name="ws.disconnectInline" Type="Bool">true</Property>
+			<Property Name="ws.disconnectTypeDefs" Type="Bool">false</Property>
 			<Property Name="ws.guid" Type="Str">{8DCFDB4C-6E3F-482A-9BBF-D343E4EAE9E3}</Property>
+			<Property Name="ws.modifyLibraryFile" Type="Bool">true</Property>
 			<Property Name="ws.public_folder_name" Type="Str">Public</Property>
+			<Property Name="ws.remoteDebugging" Type="Bool">false</Property>
+			<Property Name="ws.removeLibraryItems" Type="Bool">true</Property>
+			<Property Name="ws.removePolyVIs" Type="Bool">true</Property>
+			<Property Name="ws.serveDefaultDoc" Type="Bool">true</Property>
+			<Property Name="ws.SSE2" Type="Bool">true</Property>
+			<Property Name="ws.static_permissions" Type="Str"></Property>
+			<Property Name="ws.version.build" Type="Int">0</Property>
+			<Property Name="ws.version.fix" Type="Int">0</Property>
+			<Property Name="ws.version.major" Type="Int">1</Property>
+			<Property Name="ws.version.minor" Type="Int">0</Property>
 			<Item Name="Public Content" Type="Folder" URL="../Server/WebPages/Public">
 				<Property Name="NI.DISK" Type="Bool">true</Property>
 			</Item>
@@ -26,18 +40,86 @@
 			<Item Name="Web Resources" Type="HTTP WebResources Container">
 				<Item Name="Login" Type="HTTP WebResources Container">
 					<Item Name="Login.vi" Type="VI" URL="../Server/Server Core/WebAPIs/Login.vi">
+						<Property Name="ws.buffered" Type="Bool">true</Property>
+						<Property Name="ws.includeNameInURL" Type="Bool">true</Property>
+						<Property Name="ws.keepInMemory" Type="Bool">true</Property>
+						<Property Name="ws.loadAtStartup" Type="Bool">true</Property>
 						<Property Name="ws.method" Type="Int">3</Property>
+						<Property Name="ws.outputFormat" Type="Int">2</Property>
+						<Property Name="ws.outputType" Type="Int">0</Property>
+						<Property Name="ws.permissions" Type="Str"></Property>
+						<Property Name="ws.requireAPIKey" Type="Bool">false</Property>
 						<Property Name="ws.type" Type="Int">1</Property>
+						<Property Name="ws.uri" Type="Str"></Property>
+						<Property Name="ws.useHeaders" Type="Bool">true</Property>
+						<Property Name="ws.useStandardURL" Type="Bool">true</Property>
 					</Item>
 				</Item>
 				<Item Name="TestPage" Type="HTTP WebResources Container">
 					<Item Name="TestInformation.vi" Type="VI" URL="../Server/Server Core/WebAPIs/TestInformation.vi">
+						<Property Name="ws.buffered" Type="Bool">true</Property>
+						<Property Name="ws.includeNameInURL" Type="Bool">true</Property>
+						<Property Name="ws.keepInMemory" Type="Bool">true</Property>
+						<Property Name="ws.loadAtStartup" Type="Bool">true</Property>
 						<Property Name="ws.method" Type="Int">1</Property>
+						<Property Name="ws.outputFormat" Type="Int">2</Property>
+						<Property Name="ws.outputType" Type="Int">1</Property>
+						<Property Name="ws.permissions" Type="Str"></Property>
+						<Property Name="ws.requireAPIKey" Type="Bool">false</Property>
 						<Property Name="ws.type" Type="Int">1</Property>
+						<Property Name="ws.uri" Type="Str"></Property>
+						<Property Name="ws.useHeaders" Type="Bool">true</Property>
+						<Property Name="ws.useStandardURL" Type="Bool">true</Property>
+					</Item>
+					<Item Name="TestCurrentStatus.vi" Type="VI" URL="../Server/Server Core/WebAPIs/TestCurrentStatus.vi">
+						<Property Name="ws.buffered" Type="Bool">true</Property>
+						<Property Name="ws.includeNameInURL" Type="Bool">true</Property>
+						<Property Name="ws.keepInMemory" Type="Bool">true</Property>
+						<Property Name="ws.loadAtStartup" Type="Bool">true</Property>
+						<Property Name="ws.method" Type="Int">1</Property>
+						<Property Name="ws.outputFormat" Type="Int">2</Property>
+						<Property Name="ws.outputType" Type="Int">1</Property>
+						<Property Name="ws.permissions" Type="Str"></Property>
+						<Property Name="ws.requireAPIKey" Type="Bool">false</Property>
+						<Property Name="ws.type" Type="Int">1</Property>
+						<Property Name="ws.uri" Type="Str"></Property>
+						<Property Name="ws.useHeaders" Type="Bool">true</Property>
+						<Property Name="ws.useStandardURL" Type="Bool">true</Property>
+					</Item>
+					<Item Name="StartTest.vi" Type="VI" URL="../Server/Server Core/WebAPIs/StartTest.vi">
+						<Property Name="ws.buffered" Type="Bool">true</Property>
+						<Property Name="ws.includeNameInURL" Type="Bool">true</Property>
+						<Property Name="ws.keepInMemory" Type="Bool">true</Property>
+						<Property Name="ws.loadAtStartup" Type="Bool">true</Property>
+						<Property Name="ws.method" Type="Int">1</Property>
+						<Property Name="ws.outputFormat" Type="Int">2</Property>
+						<Property Name="ws.outputType" Type="Int">1</Property>
+						<Property Name="ws.permissions" Type="Str"></Property>
+						<Property Name="ws.requireAPIKey" Type="Bool">false</Property>
+						<Property Name="ws.type" Type="Int">1</Property>
+						<Property Name="ws.uri" Type="Str"></Property>
+						<Property Name="ws.useHeaders" Type="Bool">true</Property>
+						<Property Name="ws.useStandardURL" Type="Bool">true</Property>
+					</Item>
+					<Item Name="GetQuestion.vi" Type="VI" URL="../Server/Server Core/WebAPIs/GetQuestion.vi">
+						<Property Name="ws.buffered" Type="Bool">true</Property>
+						<Property Name="ws.includeNameInURL" Type="Bool">true</Property>
+						<Property Name="ws.keepInMemory" Type="Bool">true</Property>
+						<Property Name="ws.loadAtStartup" Type="Bool">true</Property>
+						<Property Name="ws.method" Type="Int">1</Property>
+						<Property Name="ws.outputFormat" Type="Int">2</Property>
+						<Property Name="ws.outputType" Type="Int">1</Property>
+						<Property Name="ws.permissions" Type="Str"></Property>
+						<Property Name="ws.requireAPIKey" Type="Bool">false</Property>
+						<Property Name="ws.type" Type="Int">1</Property>
+						<Property Name="ws.uri" Type="Str"></Property>
+						<Property Name="ws.useHeaders" Type="Bool">true</Property>
+						<Property Name="ws.useStandardURL" Type="Bool">true</Property>
 					</Item>
 				</Item>
 			</Item>
 		</Item>
+		<Item Name="login test.vi" Type="VI" URL="../Test codes/login test.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="BuildHelpPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/BuildHelpPath.vi"/>
