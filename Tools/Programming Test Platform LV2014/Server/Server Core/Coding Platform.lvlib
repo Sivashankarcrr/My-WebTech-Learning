@@ -26,10 +26,12 @@
 		<Item Name="Get Candidate Test Info.vi" Type="VI" URL="../APIs/Get Candidate Test Info.vi"/>
 		<Item Name="Get Test Description.vi" Type="VI" URL="../APIs/Get Test Description.vi"/>
 		<Item Name="Start Test.vi" Type="VI" URL="../APIs/Start Test.vi"/>
+		<Item Name="Go Next Question.vi" Type="VI" URL="../APIs/Go Next Question.vi"/>
 		<Item Name="Stop Application.vi" Type="VI" URL="../APIs/Stop Application.vi"/>
 	</Item>
 	<Item Name="SubVIs" Type="Folder">
 		<Item Name="Enqueue Multiple.vi" Type="VI" URL="../SubVIs/Enqueue Multiple.vi"/>
+		<Item Name="Get Next Question.vi" Type="VI" URL="../SubVIs/Get Next Question.vi"/>
 		<Item Name="Get Question for Candidate.vi" Type="VI" URL="../Get Question for Candidate.vi"/>
 		<Item Name="Path Constants.vi" Type="VI" URL="../SubVIs/Path Constants.vi"/>
 		<Item Name="Queue Driver.vi" Type="VI" URL="../SubVIs/Queue Driver.vi"/>

@@ -1,0 +1,20 @@
+.bg-img {
+    /* The image used */
+    background-image: url("bg.jpg");
+  
+    min-height: 380px;
+}
+
+
+.container {
+    border: 2px solid #ccc;
+    background-color: rgb(45, 48, 49);
+    opacity: 0.8;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 16px 0
+    
+  }
+
+
+  

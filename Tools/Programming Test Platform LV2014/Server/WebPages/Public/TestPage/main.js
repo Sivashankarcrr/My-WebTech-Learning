@@ -130,9 +130,22 @@ function getQuestion()
 
 function UpdateQuestion(JSON)
 {
-  document.getElementById("QuestionName").innerHTML = "Question Name :" + JSON.QuestionTitle;
+  document.getElementById("QuestionName").innerHTML =  JSON.QuestionTitle;
   document.getElementById("QuestionDetails").innerHTML = JSON.Question;
   
- 
+  var B_Next = document.createElement("button");
+  var Placholder = document.getElementById("NextButtonPlaceholder")
+  B_Next.innerHTML = "Next"
+  B_Next.addEventListener("click",getNextQuestion)
+  Placholder.appendChild(B_Next);
   
+}
+function getNextQuestion()
+{
+  var url ='http://127.0.0.1:8001/SolitonCodingContest/TestPage/NextQuestion';
+  
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("GET", url, true);
+  xhttp.send();
+  window.location.reload();
 }

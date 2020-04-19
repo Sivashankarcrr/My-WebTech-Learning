@@ -1,0 +1,10 @@
+Write a C program which will convert the user input string to 
+a) All Lower Case
+b) All Upper Case
+c) Inverting the Case
+
+For example, if the user provided string is “Soliton Technologies”, then the output needs to be:
+
+All Lower Case – soliton technologies
+All Upper Case – SOLITON TECHNOLOGIES
+Inverting the Case – sOLITON tECHNOLOGIES

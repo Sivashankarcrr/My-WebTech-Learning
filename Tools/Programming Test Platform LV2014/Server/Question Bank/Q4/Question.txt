@@ -1,0 +1,4 @@
+Write a C Program to remove excess spaces,blanks from the given sentence. 
+
+Eg: Input Sentence: This      is     a sample sentence.
+Output Sentence: This is a sample sentence.
